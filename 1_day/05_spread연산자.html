@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+             spread 연산자 (*****)
+
+            1.    ...
+            2. 배열 또는 JSON객체의 값들의 내용을 펼쳐서 사용할 때
+            3. 용도
+               가. 기존 배열또는 JOSN객체에 새로운 값을 추가할 때
+               나. 기존 배열또는 JOSN객체값을 병합할 때
+
+        */
+
+        //1. 배열
+        var arr = [1, 2, 3];
+
+        var arr2 = [arr];
+        console.log(arr2);
+        var arr3 = [...arr];
+        console.log(arr3);
+
+        //가. 새로운 값을 추가할 때 (******)
+        var arr = [1, 2, 3];
+        //arr.push(10);
+        arr = [...arr, 10];
+        console.log(arr);
+
+        //나. 배열 병합 할 때
+        var n = [1, 2, 3];
+        var n2 = [10, 20, 30, 40];
+        var new_arr = [...n, ...n2];
+        console.log(new_arr);
+
+        //2. JSON 객체
+        var x = { v1: 100, v2: 200 }
+
+        var x2 = { ...x }
+        console.log(x2);
+
+        //가. 새로운 값을 추가할 때 (******)
+        var x = { v1: 100, v2: "hello" }
+        //기존
+        //x.v3 = 300;
+        x = { ...x, v3: 300 };
+        console.log(x);
+
+        //나. 병합할 때(******)
+        var new_value = {
+            v1: 400,
+            v5: 500
+        }
+        x = { ...x, ...new_value };
+        console.log(x);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
