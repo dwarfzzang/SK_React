@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+           자바스크립트 함수 특징
+            1. 호출해야 실행이 된다.
+            2. 호출시 인자값의 갯수와 파라미터 변수가 갯수가 달라도 된다.
+            3. default 파라미터 사용 가능(ES6)
+            4. rest 파라미터 사용 가능(ES6)
+            5. 일급객체(first-class)(******)
+              ==> 기능처리 해주는 함수를 데이터로 간주해서 처리
+              가. 함수를 변수에 저장 가능하다.
+              나. 함수를 임의의 함수의 리턴값으로 사용 가능하다.
+              다. 함수를 임의의 함수호출시 인자값으로 사용 가능하다.
+        */
+
+        function fun() {
+            console.log("fun");
+        }
+        fun();
+
+        console.log(fun);
+        var xxx = fun;
+        xxx();
+
+        console.log("#################################")
+
+        function fun2() {
+            return fun;
+        }
+        var result = fun2();
+        result();
+
+        console.log("#################################")
+
+        function fun3(n) {
+            console.log(n);
+            n();
+        }
+        fun3(fun);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

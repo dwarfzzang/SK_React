@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+            함수 특징
+            1. 호출해야 실행이 된다.
+            2. 호출시 인자값의 갯수와 파라미터 변수가 갯수가 달라도 된다.
+        */
+
+        function fun(n) {
+            console.log(n);
+        }
+
+        fun();   // undefined  ===> default 파라미터 (ES6)
+        fun(10);
+        fun(1, 2, 3);  // 2, 3 누락  ==> rest 파라미터(ES6)
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
