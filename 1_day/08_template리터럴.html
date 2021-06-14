@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+          자바스크립트에서 문자열을 표현하는 방법 3가지
+           1. ""
+           2. ''
+           3. `` (backtick) ==> template 리터럴
+               가. backtick 문자열내에 임의의 변수 포함 가능 ==> 손쉽게 일정 포맷 출력 가능
+               나. 문자열이 많고 특정한 포맷(html태그등)으로 출력
+            
+        */
+
+        //가. 문자열 생성
+        var s = "hello";
+        var s2 = 'hello';
+        var s3 = `hello`;
+        console.log(s, s2, s3);
+
+        //나. backtick 이용한 포맷
+        // 이름: 홍길동 , 나이: 20
+
+        var name = "홍길동";
+        var age = 20;
+
+        var m = "이름:" + name + ", 나이:" + age;
+        console.log(m);
+
+        var m2 = `이름:${name}, 나이:${age}`;
+        console.log(m2);
+
+        //다. 문자열이 많고 특정한 포맷(html태그등)으로 출력
+
+        var x = "<table><tr><td>1</td> \
+            <td>2</td> \
+            </tr></table>";
+        console.log(x);
+        var x2 = `
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>    
+            </table>  
+        `;
+        console.log(x2);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
