@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+             구조 분해 할당(destructuring)-(*****)
+            => 구조(배열, JSON객체) 손쉽게 분해해서 새로운 변수에 할당하는 방법
+
+        */
+
+        //1. 이전 방식
+        function fun(n) {
+            console.log(n.v1, n.v2);
+            console.log(n["v1"], n["v2"]);
+        }
+
+        var obj = { v1: 100, v2: 200 };
+        fun(obj);
+        fun({ v1: 100, v2: 200 });
+
+        console.log("#################################")
+        //2 destructuring
+        function fun({ v1, v2 }) {
+            console.log(v1, v2);
+        }
+
+        var obj = { v1: 100, v2: 200 };
+        fun(obj);
+        fun({ v1: 100, v2: 200 });
+        console.log("#################################")
+        //3 destructuring => key가 다르거나 갯수가 다르거나
+
+        //default 파라미터
+        var fun2 = ({ v1, v3 = 999 }) => {
+            console.log(v1, v3);
+        };
+        fun2({ v1: 100, v2: 200 });
+
+        //rest 파라미터
+        var fun3 = ({ v1, ...rest }) => {
+            console.log(v1, rest);
+            var { v2, v3 } = rest;
+            console.log(v2, v3);
+        };
+        fun3({ v1: 100, v2: 200, v3: 300 });
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
