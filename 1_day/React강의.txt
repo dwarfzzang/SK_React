@@ -23,6 +23,7 @@ skgood
       - Reactjs code snippets
 
   5) 크롬 브라우저에 React 확장 프로그램 설치
+      https://chrome.google.com/webstore/category/extensions?hl=ko&
       - 웹 스토어에서 react로 검색하여
          React Developer Tools 설치
 
