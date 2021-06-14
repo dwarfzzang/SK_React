@@ -56,8 +56,10 @@
         var result = arr.filter((value, idx, array) => {
             return value % 2 == 0;
         });
-
+        // (*****)
         var result = arr.filter((value, idx, array) => value % 2 == 0);
+        var result = arr.filter((value) => value % 2 == 0);
+        var result = arr.filter(value => value % 2 == 0);
         console.log(result);
 
     </script>
