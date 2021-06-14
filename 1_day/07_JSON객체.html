@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+            자바스크립트 객체 표현식 ( JSON: JavaScript Object Notation)
+             가. 배열(객체) 표현식
+             나. 객체 표현식 (JSON 객체)
+
+        */
+
+        //1. 이전 방식
+        var person = {
+            name: "홍길동",
+            age: 20,
+            setName: function (n) { this.name = n; },
+            getName: function () { return this.name; }
+        };
+        console.log(person.name, person.age);
+        person.setName("이순신");
+        console.log(person.getName());
+
+        //// ES6 /////////////////////////////////////
+        //2. key값을 변수로 할당하여 동적 지정 가능하다. (***)
+        // 결과값: { sport01:"야구", sport02: "농구"}
+        var k = "sport";
+        var hobby = {
+            [k + "01"]: "야구",
+            [k + "02"]: "농구",
+        };
+        console.log(hobby);
+
+        //3. JSON표현식의 함수 간소화
+        var person = {
+            name: "홍길동",
+            age: 20,
+            setName: function (n) { this.name = n; },
+            getName: function () { return this.name; }
+        };
+        var person2 = {
+            name: "홍길동",
+            age: 20,
+            setName(n) { this.name = n; },
+            getName() { return this.name; }
+        };
+        person2.setName("이순신");
+        console.log(person2.getName());
+
+        //4. JSON표현식의 속성 간소화 ==> key와 value 표현이 동일한 경우
+        var name = "홍길동";
+        var age = 20;
+        var person3 = {
+            name: name,
+            age: age,
+            setName(n) { this.name = n; },
+            getName() { return this.name; }
+        };
+        var person4 = {
+            name,  //name: name 동일
+            age,   // age: age 동일
+            setName(n) { this.name = n; },
+            getName() { return this.name; }
+        };
+
+        console.log(person4.name, person4.age);
+        person4.setName("유관순");
+        console.log(person4.getName());
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
