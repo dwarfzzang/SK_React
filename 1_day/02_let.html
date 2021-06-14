@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        자바스크립트 변수 2가지
+        1. var 키워드
+           특징:
+            1) 변수명 중복 가능
+            2) var 변수의 스코프(scope)는 블럭 scope가 아닌 함수 scope 이다.
+            3) 호이스팅(hoisting) 가능
+             ==> 파싱단계에서 var로 정의된 변수를  최상위 위치에 끌어 올려서 선언한다.
+
+        2. let 키워드(ES6) ==> 자바와 비슷한 문법
+          특징:
+            1) 변수명 중복 불가능
+            2) let 변수의 스코프(scope)는 블럭 scope 따른다.
+            3) 호이스팅(hoisting) 불가능
+    */
+
+        let m = 10;
+        // let m = 100;
+        console.log(m);
+
+        if (true) {
+            let m2 = 100;
+            console.log(m2);
+        }
+        //console.log(m2);
+
+        ////////////////////////////////
+
+        //console.log(n);
+        let n = 999;
+        console.log(n);
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

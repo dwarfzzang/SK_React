@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+        vsc 단축치
+        1. ctrl + B
+        2. 한줄복사: shift + alt + 화살표
+        3. 한줄 삭제: ctrl+ shift + k
+        4. 행 이동: alt + 화살표
+        */
+
+        /*
+            자바스크립트 변수 2가지
+            1. var 키워드
+               특징:  
+                1) 변수명 중복 가능
+                2) var 변수의 스코프(scope)는 블럭 scope가 아닌 함수 scope 이다.
+                3) 호이스팅(hoisting) 가능
+                 ==> 파싱단계에서 var로 정의된 변수를  최상위 위치에 끌어 올려서 선언한다.
+
+            2. let 키워드(ES6) ==> 자바와 비슷한 문법
+
+        */
+
+        var m = 100;
+        var m = 200;
+        console.log(m);
+
+        if (true) {
+            var m2 = 90;
+            console.log(m2);
+        }
+        console.log(m2);
+
+        function fun() {
+            var m3 = 80;
+            console.log(m3);
+        }
+        //console.log(m3);  함수 밖에서 변수 사용 불가
+
+        fun();
+        /////////////////////
+        console.log(n); // undefined
+        var n = 999;
+        console.log(n);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
